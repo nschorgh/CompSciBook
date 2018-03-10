@@ -58,11 +58,11 @@ int main() {
 exp(-2./T)=0.42 
 
 
-test I went through:
-see initial condition is right
-see if T=0 gives me all alignment
-calculate probabilties from output statistics: E, flip
-check critical temperatures
+tests I went through:
+  see initial condition is right
+  see if T=0 aligns all
+  calculate probabilties from output statistics: E, flip
+  check critical temperatures
 
 */
 

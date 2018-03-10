@@ -1,8 +1,8 @@
 # NumPy program example
-import numpy as np
+import numpy
 N=64
-a=np.zeros(N)
+a=numpy.zeros(N)
 for i in range (0,N):
-    a[i]=np.sin(i/2.)
+    a[i]=numpy.sin(i/2.)
 b=max(a)
 print b**5/N
