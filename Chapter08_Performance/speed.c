@@ -5,7 +5,8 @@
 int main() {
   const int N = 1000000000;
   int i;
-  double a,before,elapsed;
+  double a;
+  double before,elapsed;
 
   a = 1.;
   before = clock();
@@ -27,7 +28,7 @@ int main() {
   
   a = 1.;
   before = clock();
-  for(i=0;i<N;i++) a=sqrt(2.*i);
+  for(i=0;i<N;i++) a=sqrt(a+i);
   elapsed = (clock()-before)/CLOCKS_PER_SEC;
   printf("%f %f\n",elapsed,a);
   
@@ -39,7 +40,7 @@ int main() {
 
   a = 1.;
   before = clock();
-  for(i=0;i<N;i++) a=exp(i*1e-7);
+  for(i=0;i<N;i++) a=exp(1./a);
   elapsed = (clock()-before)/CLOCKS_PER_SEC;
   printf("%f %f\n",elapsed,a);
 
