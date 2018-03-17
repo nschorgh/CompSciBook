@@ -1,0 +1,66 @@
+Comparison of speed of arithmetic operations
+
+Intel Xeon CPU E5-1650v4 3.60 GHz (2017), Linux
+gcc -O3  (Gnu CC 5.4.0, get indistinguishable results with gfortran -O3)
+
+    int divide 	 2.06, 2.05		 2.1ns   ( 8 cycles)
+    double add   0.87, 0.92, 0.94, 0.89	 0.91ns  ( 3.3 cycles)
+    double mult  0.94, 0.94, 0.93, 0.81	 0.91ns  ( 3.3 cycles)
+    double div   3.78, 3.83, 3.72 	 3.8ns   (14 cycles)
+    sqrt+add 	 6.37, 6.40        	 6.4ns   (23 cycles)
+    sin          67.5, 68.5, 69.2 	 69ns   (250 cycles)
+    cos  	 72.0
+    exp+div 	 75.0, 67.9, 66.6	 70ns   (250 cycles)
+    float add	 2.47, 2.49		 2.5ns   ( 9 cycles)
+    float div	 6.72, 6.71		 6.7ns   (24 cycles)
+    float sin	 66.6  			 67ns   (240 cycles)
+
+Intel Core i5 1.5 GHz, Mac/Xcode
+gcc -O3
+    int divide	2.77, 2.92, 2.80	2.8ns	( 7 cycles)
+    double add	1.07, 1.05		1.1ns	( 2.8 cycles)
+    double mult	1.76, 1.78		1.8ns	( 4.5 cycles)
+    double div	7.04, 7.09		7.1ns	(18 cycles)
+    sqrt+add	8.28, 7.99		8.1ns	(20 cycles)
+    sin		35.8, 35.3		35ns	(88 cycles)
+    exp+div 	28.9, 29.8		29ns	(73 cycles)
+
+
+
+Intel Xeon CPU E5-1650v4 3.60 GHz (2017), Linux = same as above
+pgcc -O3  (PGI Compiler 17.10)
+
+    int divide 	 2.27, 2.32		2.3ns	( 8 cycles)
+    double add   0.19, 0.18, 0.19	0.19ns	(0.7 cycles)
+    double mult  0.11, 0.11, 0.12	0.11ns	(0.4 cycles)
+    double div   3.74, 3.74		3.7ns	(13 cycles)
+    sqrt+add 	 6.11, 6.11		6.1ns   (22 cycles)
+    sin          20.9, 20.9		21ns    (76 cycles)
+    exp+div 	 19.3, 19.3		19ns    (68 cycles)
+    float add	 2.50
+
+
+Note: Programmed such that each operation depends on the outcome of the previous operation
+
+Historical info:
+
+250 MHz MIPS R10000
+Kernighan and Pike (1999) determined in nanoseconds per operation:
+     int add,sub,mul      12 
+     int divide          114  (30 cycles)
+     float add,sub,mul    12
+     float div            28 
+     double add,sub,mul   12  ( 3 cycles)
+     double div           58  (15 cycles)
+     sqrt                112  (28 cycles)
+     sin	 	 514  (42 cycles)
+     log	 	 418
+     exp	         462  (39 cycles)
+     float assignment a=b  8
+     double assignment a=b 8
+     if i==5               4
+     if i!=5		  12 
+     fprintf,fscanf int 1900
+
+B.W. Kernighan & R. Pike (1999). The Practice of Programming. Addison-Wesley.
+
