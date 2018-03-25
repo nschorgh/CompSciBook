@@ -30,3 +30,5 @@
       example= sin(3.*x)-x
       return
       end
+
+C     closely based on 1986-92 Numerical Recipes (C) 

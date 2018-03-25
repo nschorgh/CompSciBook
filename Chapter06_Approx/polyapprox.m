@@ -1,7 +1,6 @@
 set(0,'defaultaxeslinewidth',1.5);
 set(0,'defaultaxesfontsize',26);
 
-%wysiwyg;
 n=11  % use n=11 for figure
 
 clf;

@@ -59,8 +59,8 @@ exp(-2./T)=0.42
 
 
 tests I went through:
-  see initial condition is right
-  see if T=0 aligns all
+  check whether initial condition is right
+  check whether T=0 aligns all
   calculate probabilties from output statistics: E, flip
   check critical temperatures
 

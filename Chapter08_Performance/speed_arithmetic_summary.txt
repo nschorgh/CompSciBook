@@ -15,8 +15,10 @@ gcc -O3  (Gnu CC 5.4.0, get indistinguishable results with gfortran -O3)
     float div	 6.72, 6.71		 6.7ns   (24 cycles)
     float sin	 66.6  			 67ns   (240 cycles)
 
+
 Intel Core i5 1.5 GHz, Mac/Xcode
 gcc -O3
+
     int divide	2.77, 2.92, 2.80	2.8ns	( 7 cycles)
     double add	1.07, 1.05		1.1ns	( 2.8 cycles)
     double mult	1.76, 1.78		1.8ns	( 4.5 cycles)
@@ -26,8 +28,7 @@ gcc -O3
     exp+div 	28.9, 29.8		29ns	(73 cycles)
 
 
-
-Intel Xeon CPU E5-1650v4 3.60 GHz (2017), Linux = same as above
+Intel Xeon CPU E5-1650v4 3.60 GHz (2017), Linux - same as above
 pgcc -O3  (PGI Compiler 17.10)
 
     int divide 	 2.27, 2.32		2.3ns	( 8 cycles)
@@ -42,7 +43,8 @@ pgcc -O3  (PGI Compiler 17.10)
 
 Note: Programmed such that each operation depends on the outcome of the previous operation
 
-Historical info:
+
+Historical comparison:
 
 250 MHz MIPS R10000
 Kernighan and Pike (1999) determined in nanoseconds per operation:
@@ -62,5 +64,5 @@ Kernighan and Pike (1999) determined in nanoseconds per operation:
      if i!=5		  12 
      fprintf,fscanf int 1900
 
-B.W. Kernighan & R. Pike (1999). The Practice of Programming. Addison-Wesley.
+Source: B.W. Kernighan & R. Pike (1999). The Practice of Programming. Addison-Wesley.
 

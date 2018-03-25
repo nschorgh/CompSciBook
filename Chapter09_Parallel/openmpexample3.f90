@@ -1,5 +1,5 @@
 program openmpexample
-  use omp_lib
+  ! not openMP, but analogous to openmpexample
   implicit none
   integer i,k
   real(8) :: x 
