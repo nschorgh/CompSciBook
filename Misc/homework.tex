@@ -14,6 +14,7 @@ Numerical Mathematics, Computer Technology, and Scientific Discovery}
 
 \maketitle
 
+\newpage
 \section{Analytical \& Numerical Solutions}
 \begin{enumerate}
 
@@ -72,11 +73,7 @@ What software tools do you use?
 
 
 
-
-
-
-
-
+\clearpage
 \section{A Few Concepts from Numerical Analysis}
 
 \begin{enumerate}
@@ -179,7 +176,7 @@ Programming exericse: Given a set of floating-point numbers between 0 and 10, so
 
 
 \item {\it Newton fractal:}  \label{exrc:fractal}
-As a programming exercise, an curious example of how complicated the domain of convergence for Newton's method can be is $z^3-1=0$ in the complex plane.  The solutions to the equation are the cubic roots of +1.  The domain of attraction for each of the three roots is a fractal. Write a program that produces this fractal, where $z=x+iy$ is the starting point of the iteration. If after 2000 steps the iteration has reached 1 or is close to 1, color the coordinate black, otherwise white. Hence, black will represent the set of initial conditions that converge to +1. Plot the results for $-1\leq x \leq 1$, $-1\leq y \leq1$, at a resolution of 0.002.
+As a programming exercise, a curious example of how complicated the domain of convergence for Newton's method can be is $z^3-1=0$ in the complex plane.  The solutions to the equation are the cubic roots of +1.  The domain of attraction for each of the three roots is a fractal. Write a program that produces this fractal, where $z=x+iy$ is the starting point of the iteration. If after 2000 steps the iteration has reached 1 or is close to 1, color the coordinate black, otherwise white. Hence, black will represent the set of initial conditions that converge to +1. Plot the results for $-1\leq x \leq 1$, $-1\leq y \leq1$, at a resolution of 0.002.
 
 
 \end{enumerate}
@@ -295,8 +292,8 @@ Weighting proportional with distance improves the robustness of a fit.  This met
   
 \item \label{prbl:fourier}
 \begin{enumerate}\setlength{\itemsep}{0pt}
-\item Calculate the Fourier coefficients of the continuous but non-periodic function $f(x)=x/\pi$, on the interval $[-\pi,\pi]$. Show that their absolute values are proportional to $1/k$.
-\item Any non-periodic continuous function can be written as the sum of such a ramp and a periodic function. From this, argue that continuous non-periodic functions have Fourier coefficients that decay as $1/k$.
+\item Calculate the Fourier coefficients of the continuous but nonperiodic function $f(x)=x/\pi$, on the interval $[-\pi,\pi]$. Show that their absolute values are proportional to $1/k$.
+\item Any nonperiodic continuous function can be written as the sum of such a ramp and a periodic function. From this, argue that continuous nonperiodic functions have Fourier coefficients that decay as $1/k$.
 \item Calculate the Fourier coefficients of a tent-shaped function, $f(x)=1-|x|/\pi$ on $[-\pi,\pi]$, which is continuous and periodic, and show that their absolute values are proportional to $1/k^{2}$.
 \end{enumerate}
 
@@ -360,7 +357,7 @@ c = \sum_{i=1}^N x_i y_i
 
 
 \item
-To find the minmum pairwise distance between a large numer of points with coordinates $(x,y)$, we can calculate the distances $\sqrt{(x_i-x_j)^2 + (y_i-y_j)^2}$ and then take the minimum. But because the square root is an expensive function, it is faster to only calculate the square of the distances and take the square root only once the minimum is found.
+To find the minmum pairwise distance between a large number of points with coordinates $(x,y)$, we can calculate the distances $\sqrt{(x_i-x_j)^2 + (y_i-y_j)^2}$ and then take the minimum. But because the square root is an expensive function, it is faster to only calculate the square of the distances and take the square root only once the minimum is found.
 In a programming language of your choice:
 \begin{enumerate} \setlength{\itemsep}{0pt}
 \item implement both versions,
@@ -415,7 +412,7 @@ enddo
 \item
 Learn how to ingest a command line argument into a program, e.g.\ {\tt myprog 7} should read an integer number or single character from the command line. Then use this input argument to read file {\tt in.7} and write a file named {\tt out.7}.
 This is one approach to run the same program with many different input parameters.
-Submi the source code.
+Submit the source code.
 
 \item Learn how to profile your code, that is, obtain the fraction of time consumed by each function in your program. Take or write an arithmetically intensive program that takes at least 30 seconds to execute, then find out which function or command consumes most of the time.
 Submit an outline of the steps taken and the output of the profiler.
@@ -442,7 +439,7 @@ How many times is the content of the innermost loop executed?
     }
   }
 \end{verbatim}
-(If unfamiliar with the syntax of a C loop, see Chapter~4).
+(If unfamiliar with the syntax of a C loop, see chapter~4.)
 
 
 \item 
@@ -487,7 +484,7 @@ limited or data-transfer limited?
 Uniform distribution of points on sphere.
 For points that are distributed uniformly over the surface of a sphere (the same number of points per area), the geographic coordinates are not uniformly distributed. Here we seek to generate point coordinates that are uniformly distributed over a unit sphere.
 \begin{enumerate} \setlength{\itemsep}{0pt}
-\item Derive the transformation necessary to calculate geographic latitude $\lambda$ and longitude $\phi$ from random variables $u, v$ that are uniformly distribution between 0 to 1.
+\item Derive the transformation necessary to calculate geographic latitude $\lambda$ and longitude $\phi$ from random variables $u, v$ that are uniformly distribed between 0 to 1.
 \item Implement a program that produces random points uniformly distributed over a sphere.
 \item Devise a way to validate the outcome.
 \item Validate your implementation with this test.
@@ -502,9 +499,9 @@ Generate a Maxwell distribution for velocity $|v|=\sqrt{v_1^2+v_2^2+v_3^2}$ by g
   \[
   p(x) = \frac{1}{\pi} {a \over a^2+x^2}
   \]
-  is known as Cauchy or Lorentzian distribution
+  is known as Cauchy or Lorentzian distribution.
   \begin{enumerate} \setlength{\itemsep}{0pt}
-  \item Use the transformation method to generate a Cauchy distribution from a uniform probability distribution
+  \item Use the transformation method to generate a Cauchy distribution from a uniform probability distribution.
   \item Conduct a convergence test for the standard deviation, and show that it behaves as it should.
   \item To verify that the generated probability distribution is indeed of the correct shape, use a ``Kolmogorov-Smirnov'' test.  It uses the maximum difference between the cumulative distribution of the ideal and the sample distribution.
     \[
@@ -602,8 +599,8 @@ and in awk the variable `NF' is the number of fields (entries in a row).
   
 \item
   \begin{enumerate}\setlength{\itemsep}{0pt}
-  \item Create a large file containing numbers $>$100~MiB
-  \item Write a program that reads this file and measures the execution time
+  \item Create a large file containing numbers $>$100~MiB.
+  \item Write a program that reads this file and measures the execution time.
   \item Compress the file with one of the many available compression tools, such as zip or gzip. Determine the compression factor (ratio of file sizes).
   \item Write a program that can read the compressed file directly.
   \item Measure the reduction in read time and compare it with the reduction in file size.
@@ -615,7 +612,7 @@ and in awk the variable `NF' is the number of fields (entries in a row).
   0 273.15
   1 260.
 \end{verbatim}
-Write a script that checks that the first column contains the same values in all files and that the entries of the second column are non-negative. Then merge the files in the order of the numerical value of their file extension (0,...,99), not their alphanumerical value (0,1,10,11,...,19,2,20,...). This can be accomplished with a Unix shell script, Python, or another scripting language. Validate that the script works, using a small number of input files.
+Write a script that checks that the first column contains the same values in all files and that the entries of the second column are nonnegative. Then merge the files in the order of the numerical value of their file extension (0,...,99), not their alphanumerical value (0,1,10,11,...,19,2,20,...). This can be accomplished with a Unix shell script, Python, or another scripting language. Validate that the script works, using a small number of input files.
 
 \end{enumerate}
 
@@ -654,7 +651,7 @@ Show that this scheme is unconditionally stable.
 Such a superposition of a fully-implicit and an explicit method is called semi-implicit.\index{semi-implicit}
 Show that the Crank-Nicolson method is unconditionally stable.
 
-\item Show that the time discretization error for the Crank-Nicolson method is less than for the fully implicit method. (The analogous conclusions was reached for an ODE solver in Exercise~\ref{prbl:odesemi}).
+\item Show that the time discretization error for the Crank-Nicolson method is less than for the fully implicit method. (The analogous conclusion was reached for an ODE solver in Exercise~\ref{prbl:odesemi}.)
 \end{enumerate}
 
 
