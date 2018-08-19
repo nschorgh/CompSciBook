@@ -1,4 +1,3 @@
-% This vesion contains minor changes compared to the published version of the homework problems, but the numbering of the problems remains the same.
 \documentclass{article}
 \usepackage{url}
 \usepackage{amssymb}
@@ -120,7 +119,7 @@ Perturbing each of the three coefficients independently and infinitesimally, det
 \item \label{prbl:logistic1000}
 The iteration $x_{n+1} = 4x_n (1-x_n)$ is extremely sensitive to the initial value as well as to roundoff. Yet, thanks to the IEEE 754 standard, it is possible to reproduce the exact same sequence on many platforms.
 Calculate the first 1,010 iterations with initial conditions $x_0=0.8$ and $x_0 = 0.8+10^{-15}$. Use double (8-byte) precision.  
-Submit the program as well as the values $x_{1000}~\dots~x_{1009}$ to 9 digits after the decimal point.
+Submit the program as well as the values $x_{1000}~\dots~x_{1009}$ to 9 digits after the comma.
 We will compare the results in class.
 
 %Everyone should get the same result, irrespective of programming language, compiler, operating system, and type of CPU.  
@@ -144,7 +143,7 @@ We cannot anticipate in which order the computer will carry out these floating-p
 a) $x-\sqrt{x}$, and 
 b) $\cos^2 x - \sin^2 x$.  
 Identify values of $x$ for which they are sensitive to roundoff, and
-suggest an alternative formula for each which avoids this problem.
+suggest an alternative formula for reach which avoids this problem.
 
   
 \end{enumerate}
@@ -162,10 +161,10 @@ suggest an alternative formula for each which avoids this problem.
 
   
 \item {\it Gauss circle problem:}
-  As a basic programming exercise, write a program that calculates the number of lattice points $N$ within a circle as a function of radius $r$.
+  As a basic programming exercise, write a program that calculates the number of lattice points within a circle as a function of radius.
 In other words, how many pairs of integers $(m,n)$ are there such that $m^2+n^2 \leq  r^2$.
-A finite resolution in $r$ is acceptable. Submit the souce code of the program and a graph of the results for $N/r^2$ for $r$ from 0 to 10.
-% Specific plot instructions added compare to published version
+A finite resolution in $r$ is acceptable. Submit the souce code of the program and a graph of the results.
+
 
 \item 
 With a programming language of your choice, read comma separated numbers from a file with an unknown number of rows.
@@ -229,9 +228,7 @@ Show mathematically that a parabola $p(x)$ that passes through three equally spa
 
 \item Finite-difference expression for unequally spaced points. \vspace{-1em}
 \begin{enumerate}\setlength{\itemsep}{0pt}
-\item Based on a stencil of three points $(0,x_1,x_2)$, find an approximation of the first derivative at $x=0$, that is, find the coefficients for
-  %$f'(0) = c_0 + c_1 x_1 + c_2 x_2$ % error in published version
-  $f'(0) = c_0 f(0) + c_1 f(x_1) + c_2 f(x_2)$.
+\item Based on a stencil of three points $(0,x_1,x_2)$, find an approximation of the first derivative at $x=0$, that is, find the coefficients for $f'(0) = c_0 + c_1 x_1 + c_2 x_2$
 \item Determine the order of the error term
 \item Implement and verify with a numerical convergence test that the finite-difference approximation converges.
 \item Also demonstrate that it converges at the anticipated rate.
@@ -678,7 +675,7 @@ Show that the Crank-Nicolson method is unconditionally stable.
     \item
   Write down a finite-difference approximation for the conservation law
   \[
-  {\partial f \over \partial t} = {\partial \over \partial x} \left( D(x) {\partial f \over \partial x} \right) 
+  {\partial f \over \partial t} = {\partial \over \partial x} \left( D(x) {\partial f \over \partial x} \right) = 0 
   \]
   with boundary conditions $f(x=0,t)=1$ and $\partial f(x=L,t)/\partial x = 1$.
 
