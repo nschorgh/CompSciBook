@@ -3,6 +3,7 @@
 \usepackage{url}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{upquote}
 
 \renewcommand*{\theenumi}{\thesection.\arabic{enumi}}
 
@@ -415,9 +416,12 @@ enddo
 
 
 \item
-Learn how to ingest a command line argument into a program, e.g.\ {\tt myprog 7} should read an integer number or single character from the command line. Then use this input argument to read file {\tt in.7} and write a file named {\tt out.7}.
+  Learn how to ingest a command line argument into a program, e.g.\ {\tt myprog 7} should read an integer number or single character from the command line.
+  %Then use this input argument to read file {\tt in.7} and write a file named {\tt out.7}.
+  Then use this input argument to write a file named {\tt out.7}.
 This is one approach to run the same program with many different input parameters.
 Submit the source code.
+  % Slightly simplified from printed version
 
 \item Learn how to profile your code, that is, obtain the fraction of time consumed by each function in your program. Take or write an arithmetically intensive program that takes at least 30 seconds to execute, then find out which function or command consumes most of the time.
 Submit an outline of the steps taken and the output of the profiler.
@@ -562,8 +566,10 @@ Assume $N$ is a power of 2.
   
 \item \label{exrc:wgetmlo} \index{wget}
   \begin{enumerate}\setlength{\itemsep}{0pt}
-  \item Use wget, curl, Scrapy, or a similar tool to download monthly meteorological data from 1991 to 2017 from \url{ftp://aftp.cmdl.noaa.gov/data/meteorology/in-situ/mlo/}
- 
+  \item Use wget, curl, Scrapy, or a similar tool to download hourly meteorological data from 1977 to 2017 from \url{ftp://aftp.cmdl.noaa.gov/data/meteorology/in-situ/mlo/}
+
+  \item Check to whether the data are complete for each year.
+    
   \item From the data obtained, extract the temperatures for 10m mast height and plot them.
     (Hint: awk is a tool that can accomplish this.)
   \end{enumerate}
