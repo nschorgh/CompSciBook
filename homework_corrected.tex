@@ -167,7 +167,8 @@ suggest an alternative formula for each which avoids this problem.
   As a basic programming exercise, write a program that calculates the number of lattice points $N$ within a circle as a function of radius $r$.
 In other words, how many pairs of integers $(m,n)$ are there such that $m^2+n^2 \leq  r^2$.
 A finite resolution in $r$ is acceptable. Submit the souce code of the program and a graph of the results for $N/r^2$ for $r$ from 0 to 10.
-% Specific plot instructions added compare to published version
+Use a language of your choice.
+% [Specific plot instructions added compared to print version]
 
 \item 
 With a programming language of your choice, read comma separated numbers from a file with an unknown number of rows.
@@ -568,7 +569,7 @@ Assume $N$ is a power of 2.
   \begin{enumerate}\setlength{\itemsep}{0pt}
   \item Use wget, curl, Scrapy, or a similar tool to download hourly meteorological data from 1977 to 2017 from \url{ftp://aftp.cmdl.noaa.gov/data/meteorology/in-situ/mlo/}
 
-  \item Check to whether the data are complete for each year.
+  \item Check whether the data are complete for each year.
     
   \item From the data obtained, extract the temperatures for 10m mast height and plot them.
     (Hint: awk is a tool that can accomplish this.)
@@ -615,7 +616,7 @@ and in awk the variable `NF' is the number of fields (entries in a row).
   \item Write a program that reads this file and measures the execution time.
   \item Compress the file with one of the many available compression tools, such as zip or gzip. Determine the compression factor (ratio of file sizes).
   \item Write a program that can read the compressed file directly.
-  \item Measure the reduction in read time and compare it with the reduction in file size.
+  \item Measure the change in relative read time and compare it with the relative reduction in file size.
   \end{enumerate}
   
 \item Write a script that validates and merges a set of files.
@@ -673,8 +674,13 @@ Show that the Crank-Nicolson method is unconditionally stable.
   
 \item Implement this explicit scheme using periodic boundary conditions.
 
-\item 
-  Derive the equation for the spread of a Gaussian function over time.
+\item {}
+  %Derive the equation for the spread of a Gaussian function over time.
+  %[simplified compared to the printed version]\\
+  Verify that the following is a solution to the diffusion equation (on an infinite domain):
+  \[
+  f(x,t) = \frac{1}{\sqrt{Dt}} e^{-x^2/(4Dt)}
+  \]
   
 \item
   Verify the validity of the numerical solver with an analytic solution starting with a Gaussian.
@@ -685,7 +691,7 @@ Show that the Crank-Nicolson method is unconditionally stable.
 \item
   \begin{enumerate}\setlength{\itemsep}{0pt}
     \item
-  Write down a finite-difference approximation for the conservation law
+  Write down a finite-difference approximation for the heat equation with spatially varying conductivity
   \[
   {\partial f \over \partial t} = {\partial \over \partial x} \left( D(x) {\partial f \over \partial x} \right) 
   \]
