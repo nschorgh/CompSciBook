@@ -9,12 +9,27 @@
 
 \begin{document}
 
-\title{HOMEWORK\\
-Lessons in Scientific Computing: \\
-Numerical Mathematics, Computer Technology, and Scientific Discovery}
-\date{}
+\begin{center}
+{\Large
+  HOMEWORK
+  \vspace{1em}
 
-\maketitle
+Lessons in Scientific Computing:\\
+Numerical Mathematics, Computer Technology, and Scientific Discovery 
+}
+\vspace{1em}
+
+by Norbert Sch\"orghofer\\
+CRC Press, Taylor \& Francis Group, 2018.\\
+\end{center}
+
+\vspace{10cm}\noindent
+This set of Exercises involves several corrections and moficiations compared to the printed version of the book.
+For a list of changes see corrigendum.pdf.
+
+
+
+
 
 \newpage
 \section{Analytical \& Numerical Solutions}
@@ -262,14 +277,15 @@ Carry out Exercise~\ref{prbl:kepler} and add a convergence test for part c.
 \item Derive a formula for the integral of a cubic polynomial in the interval 0 to $b$. Demonstrate that applying Simpson's rule to it will give the exact integral.
 
 \item Show that for a vector $y$ with $n$ elements
-  \[
-  \lVert y \rVert_\infty
-  \leq \lVert y \rVert_2
-  \leq \lVert y \rVert_1
-  \leq \sqrt{n} \lVert y \rVert_2
-  \leq n \lVert y \rVert_\infty
-  \]
-
+\[
+n \lVert y \rVert_2
+\geq n \lVert y \rVert_1
+\geq \lVert y \rVert_\infty
+\geq \lVert y \rVert_1 
+\geq \frac{1}{\sqrt n} \lVert y \rVert_2
+\]
+(Note that without the factors of $n$ in the definition of the norms, a choice commonly used in the literature, these relations would be rather different.)
+% Modified from printed version
 
 \item Learn how to carry out spline interpolation within a software tool or language of your choice, and demonstrate that the function in Figure~6.2, $f(x)=1/(1+25x^2)$ on the interval -1 to 1, can be approximated without the large oscillations.
 
@@ -301,7 +317,7 @@ Weighting proportional with distance improves the robustness of a fit.  This met
 \item \label{prbl:fourier}
 \begin{enumerate}\setlength{\itemsep}{0pt}
 \item Calculate the Fourier coefficients of the continuous but nonperiodic function $f(x)=x/\pi$, on the interval $[-\pi,\pi]$. Show that their absolute values are proportional to $1/k$.
-\item Any nonperiodic continuous function can be written as the sum of such a ramp and a periodic function. From this, argue that continuous nonperiodic functions have Fourier coefficients that decay as $1/k$.
+\item Any nonperiodic continuous function on the interval $[-\pi,\pi]$ can be written as the sum of such a ramp and a periodic function. From this, argue that continuous nonperiodic functions have Fourier coefficients that decay as $1/k$.
 \item Calculate the Fourier coefficients of a tent-shaped function, $f(x)=1-|x|/\pi$ on $[-\pi,\pi]$, which is continuous and periodic, and show that their absolute values are proportional to $1/k^{2}$.
 \end{enumerate}
 
@@ -453,8 +469,11 @@ How many times is the content of the innermost loop executed?
 (If unfamiliar with the syntax of a C loop, see chapter~4.)
 
 
-\item 
-Order the following functions from lowest to highest. Consider $O$ as a tight bound. If any are of the same order, indicate which:\\
+\item
+  Assign asymptotic notation (``order of'') to the following functions and sort them from slowest growing to fastest growing.
+  %Order the following functions by asymptotic growth rate, from lowest to highest.
+  %Consider $O$ as a tight bound.
+  If any are of the same order, indicate which:\\
 $N$,  $3^N$, $N\log N$, 
 $2N-N^3 +3N^5$, $N +\log N$, $N^2$,  $N!$, $(2N)!$, 
 $(\log N)^2$, $\sqrt{N} + \log N$, $\log_2 N$, $\ln N$, 
@@ -513,7 +532,7 @@ Generate a Maxwell distribution for velocity $|v|=\sqrt{v_1^2+v_2^2+v_3^2}$ by g
   is known as Cauchy or Lorentzian distribution.
   \begin{enumerate} \setlength{\itemsep}{0pt}
   \item Use the transformation method to generate a Cauchy distribution from a uniform probability distribution.
-  \item Conduct a convergence test for the standard deviation, and show that it behaves as it should.
+  \item Conduct a convergence test for the standard deviation, and show that it behaves as expected.
   \item To verify that the generated probability distribution is indeed of the correct shape, use a ``Kolmogorov-Smirnov'' test.  It uses the maximum difference between the cumulative distribution of the ideal and the sample distribution.
     \[
     D_N = \max_x |\hat P_N(x) - P(x) |
@@ -755,13 +774,11 @@ where the integral is over all space.
 \vspace{-1em}
 \begin{enumerate}\setlength{\itemsep}{0pt}
 \item Write down the Schr\"odinger equation for two electrons, including the electron-electron charge interaction.  Both electrons occupy the same spherically symmetric orbital.
-% Since both electrons occupy the same orbital, the joint wave-function must be of the form $\psi(r_1,r_2) = ...$
 
-\item The one-electron solution is $\psi(r) = b \exp(-2r/a_0)$, where $b$ is a normalization constant and $a_0$ is the Bohr radius (for the hydrogen atom $\psi(r) \propto \exp(-r/a_0)$). Express the two-electron wavefunction as $\psi(r_1,r_2) = b \exp(- a (r_1+r_2)) (1  + c\, |r_1-r_2|)$, with unknown coefficients $a$ and $c$. 
+\item The one-electron solution is $\psi(r) = b \exp(-2r/a_0)$, where $b$ is a normalization constant and $a_0$ is the Bohr radius (for the hydrogen atom $\psi(r) \propto \exp(-r/a_0)$). Express the two-electron wavefunction as $\psi(r_1,r_2) = b \exp(- a (r_1+r_2))$, with unknown coefficient $a$, whereas $b$ follows from normalization.
+  Derive an analytical expression for the energy that involves $a$ and $\lVert \psi \rVert^2$, but no derivatives of $\psi$. 
 
-\item Derive the analytic expression for the energy in terms of these coefficients. 
-
-\item Numerically minimize the energy with respect to the coefficients.
+%\item Numerically minimize the energy with respect to the coefficients.
 
 \end{enumerate}
 
