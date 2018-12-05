@@ -9,6 +9,8 @@ Taylor & Francis,  2018
 
 
 includes 
-* program examples in the book
-* figures in the book, mostly in encapsulated postscript (.eps) format
-* homework assignments in LaTeX (homework.tex in Misc/ directory)
+* Program examples in the book (in various languages)
+* Figures in the book, mostly in encapsulated postscript (.eps) format
+* Homework assignments in LaTeX and as pdf (homework_corrected is the updated version; homework_1stedition is as printed in the book, with typos)
+* List of typos (corrigendum.pdf)
+
