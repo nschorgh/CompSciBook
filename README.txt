@@ -5,12 +5,12 @@ NUMERICAL MATHEMATICS, COMPUTER TECHNOLOGY, AND SCIENTIFIC DISCOVERY
 
 by Norbert Schorghofer
 
-Taylor & Francis,  2018
+Taylor & Francis / CRC Press,  2018
 
 
 includes 
 * Program examples in the book (in various languages)
-* Figures in the book, mostly in encapsulated postscript (.eps) format
-* Homework assignments in LaTeX and as pdf (homework_corrected is the updated version; homework_1stedition is as printed in the book, with typos)
+* Figures in the book, mostly in encapsulated postscript (.eps) format; all figures are also provided in .png format
+* Homework assignments in LaTeX and as pdf (homework_1stedition is as printed in the book; homework_corrected is the updated version, with typos corrected)
 * List of typos (corrigendum.pdf)
 
