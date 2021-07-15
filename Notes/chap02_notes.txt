@@ -1,0 +1,10 @@
+Notes for Chapter 2: A Few Concepts from Numerical Analysis
+===========================================================
+
+* The fact that a continuous function with $f(a)f(b)<0$ must have a root between $a$ and $b$ is known in introductory calculus as ``intermediate value theorem".
+  
+
+* An alternate example for error propagation is as follows:
+
+If small errors in the input data, of whatever origin, can lead to large errors in the resulting output data the problem is called ``numerically badly-conditioned''.  An example is finding the root of $x^2-2x+1=0$, which is obviously a complete square $(x-1)^2=0$ with the sole degenerate root $x=1$.  Suppose there is an error in the last coefficient, $x^2-2x+1-\epsilon=0$.  Then, after solving the quadratic equation, one finds the two solutions $x=1 \pm \sqrt{\epsilon}$.  If $\epsilon$ is small, then $\sqrt\epsilon \gg \epsilon$, meaning the error in the root is much larger than the error in the coefficient.  For instance, a 1\% error in the coefficient (0.99 instead of 1) leads to a 10\% error in the root.  For illustration we can think of a parabola $y=(x-1)^2$ that touches the abscissa at $x=1$.  This is the general situation for a degenerate root, while not for a simple root.  Degenerate roots are numerically badly-conditioned.  This is a property of the problem itself, not the method used to solve it. No matter what method one uses to solve for the root, the uncertainty in the input data will lead to an uncertainty in the output data.  
+

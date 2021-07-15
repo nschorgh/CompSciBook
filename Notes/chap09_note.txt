@@ -1,0 +1,8 @@
+Note for Chapter 9: High-Performance and Parallel Computing
+===========================================================
+
+# Text draft for additions to 2nd edition
+# Now that ARM processors are in some laptops, something needs to be said about them.
+# Draft text:
+
+The most widely used family of instruction sets is x86.  The CPUs of nearly all desktop workstations use an x86 instruction set.  Another instruction set is "ARM", which is more concerned with power consumption than with processing speed.  ARM processors are found in cell phones and, increasingly, in laptops, where battery life is more of a concern than computational power.  The programs we write are the same for x86 and ARM processors, but at the lowest level, the machine language level, the instructions are different as are the CPU's registers.  For example, ARM instructions execute within a single clock cycle, whereas x86 instructions often require multiple clock cycles to finish.  Also, the bit lengths of the registers are different.  Note that we speak of x86-processors and ARM-processors, not just x86 and ARM instruction sets, because the instruction set is hardcoded.  To change the instruction set, a new processor needs to be made. 

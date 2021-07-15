@@ -1,0 +1,26 @@
+Notes for Chapter 3: Roundoff and Number Representation
+========================================================
+
+* Another example of truncation error:
+
+octave:> sind(90.+360*1e12)
+ans =  1.00000
+octave:> sind(90.+360*1e13)
+ans =  0.99998
+octave:> sind(90.+360*1e14)
+ans =  0.99950
+
+or in Python
+>>> numpy.sin(numpy.deg2rad(90.+360.*1e12))
+0.9999999989100414
+>>> numpy.sin(numpy.deg2rad(90.+360.*1e7))
+1.0
+
+
+* NAN is not equal to anything, even itself.
+When a variable with a NaN value is compared to itself, my_var == my_var, the result is false.
+
+
+* Homework problem:
+Unix time is the number of seconds that have elapsed since 1 January 1970. When Unix time is represented by a signed 32-bit integer, in what year will it overflow?
+

@@ -1,0 +1,53 @@
+Mathematical Symbols in Various Languages
+=========================================
+
+Power / Exponentiation
+**   Fortran, Matlab/Octave, Python, R
+^    Matlab/Octave, R, VisualBasic
+Note: In Python, C, and C++ the caret ^ is a bitwise XOR
+
+Assignment
+:=   Algol, Pascal
+=    most languages, including C-family and Python
+=, <-, ->  R
+
+Equal to comparison operator
+=    Algol, APL
+==   C, C++, Fortran90, Go, Java, Lua, Matlab/Octave, Mathematica, R
+===  compares value and data type in JavaScript, Swift
+.eq. Fortran
+
+Not Equal to comparison operator
+!=   C, C++, Go, Java, Mathematica, Matlab/Octave, R
+/=   Algol, Erlang, Fortran90, Haskell
+~=   Lua, Matlab/Octave
+
+Divisions
+/    almost all languages
+//   integer division: Python3 (floor division)
+%/%  integer division: R
+\    integer division: VisualBasic
+./   Matlab/Octave element-by-element division
+
+Logical AND operator
+&&   C, C++, Go, Java, JavaScript, Python, Swift
+&    Matlab/Octave, R
+&&   Matlab/Octave short-circuit
+and  Python
+.and. Fortran
+Note: In C and C++ a single | is a bitwise AND
+
+Logical OR operator
+||   C, C++, Go, Java, JavaScript, Python, Swift
+|    Matlab/Octave, R
+||   Matlab/Octave short-circuit
+or 	 Python
+.or. Fortran
+Note: In C and C++ a single | is a bitwise OR
+
+Logical NOT operator
+!    C, C++, Go, Java, JavaScript, Matlab/Octave, R, Swift
+~    Matlab/Octave (also)
+not  Python
+.not. Fortran
+
