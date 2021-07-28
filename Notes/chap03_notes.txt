@@ -22,5 +22,6 @@ When a variable with a NaN value is compared to itself, my_var == my_var, the re
 
 
 * Homework problem:
-Unix time is the number of seconds that have elapsed since 1 January 1970. When Unix time is represented by a signed 32-bit integer, in what year will it overflow?
+Unix time is the number of seconds that have elapsed since 1 January 1970.
+When Unix time is represented by a signed 32-bit integer, in what year will it overflow?
 

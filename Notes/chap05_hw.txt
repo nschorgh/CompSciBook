@@ -1,0 +1,14 @@
+Additional Homework Problem
+===========================
+
+Wien's constant: 
+Planck's distribution is given by
+\[
+E(\lambda,T) = {2hc^2 \over \lambda^5} {1\over \exp(hc/\lambda k T) - 1}
+\]
+where $\lambda$ is the wavelength, $T$ temperature, and $h$, $c$, and $k$ are
+fundamental physical constants.
+a) Derive an equation for where $E$ assumes its maximum with respect to $\lambda$. 
+b) Set $x = hc/(\lambda k T)$ and numerically solve for $x$
+Wien's constant $b$ is given by $\lambda_{\rm max} = b/T$.
+
