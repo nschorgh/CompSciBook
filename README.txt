@@ -5,7 +5,7 @@ NUMERICAL MATHEMATICS, COMPUTER TECHNOLOGY, AND SCIENTIFIC DISCOVERY
 
 by Norbert Schorghofer
 
-Taylor & Francis / CRC Press,  2018
+Taylor & Francis / CRC Press / Routledge,  2018
 
 
 includes 

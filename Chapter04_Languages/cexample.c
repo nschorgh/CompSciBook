@@ -1,4 +1,4 @@
-/* C program */
+/* C program example */
 #include <math.h>
 #include <stdio.h>
 

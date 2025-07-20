@@ -1,4 +1,4 @@
-# R program
+# R program example
 
 N=64   
 b=-2.
