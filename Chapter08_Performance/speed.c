@@ -8,41 +8,47 @@ int main() {
   double a;
   double before,elapsed;
 
+  /* floating-point addition */
   a = 1.;
   before = clock();
   for(i=0;i<N;i++) a = a+12.1;
   elapsed = (clock()-before)/CLOCKS_PER_SEC;
-  printf("%f %f\n",elapsed,a);
+  printf("add %f %f\n",elapsed,a);
 
+  /* floating-point multiplication */
   a = 1.;
   before = clock();
   for(i=0;i<N;i++) a=a*1.0000001;
   elapsed = (clock()-before)/CLOCKS_PER_SEC;
-  printf("%f %f\n",elapsed,a);
+  printf("mult %f %f\n",elapsed,a);
 
+  /* floating-point division */
   a = 1e10;
   before = clock();
   for(i=0;i<N;i++) a=a/1.0000001;
   elapsed = (clock()-before)/CLOCKS_PER_SEC;
-  printf("%f %g\n",elapsed,a);
-  
+  printf("div %f %g\n",elapsed,a);
+
+  /* sqrt + int addition */
   a = 1.;
   before = clock();
   for(i=0;i<N;i++) a=sqrt(a+i);
   elapsed = (clock()-before)/CLOCKS_PER_SEC;
-  printf("%f %f\n",elapsed,a);
-  
+  printf("sqrt %f %f\n",elapsed,a);
+
+  /* sin + 1 multiplication */
   a = 1.;
   before = clock();
   for(i=0;i<N;i++) a=sin(3.*a);
   elapsed = (clock()-before)/CLOCKS_PER_SEC;
-  printf("%f %f\n",elapsed,a);
+  printf("sin %f %f\n",elapsed,a);
 
+  /* exp + 1 division*/
   a = 1.;
   before = clock();
   for(i=0;i<N;i++) a=exp(1./a);
   elapsed = (clock()-before)/CLOCKS_PER_SEC;
-  printf("%f %f\n",elapsed,a);
+  printf("exp %f %f\n",elapsed,a);
 
   return 0;
 }

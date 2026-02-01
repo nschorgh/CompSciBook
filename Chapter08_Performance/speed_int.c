@@ -5,6 +5,7 @@ int main() {
   int i,j,k=0;
   double before,elapsed;
 
+  /* integer division + 1 addition + 2 counters */
   before = clock();
   for(i=0;i<100000;i++) {
     for(j=1;j<10000;j++) {

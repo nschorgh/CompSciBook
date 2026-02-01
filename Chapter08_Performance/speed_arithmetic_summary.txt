@@ -3,6 +3,22 @@ Comparison of Speed of Arithmetic Operations
 
 Time in seconds for 1 billion operations, multiple runs
 
+Intel Xeon CPU W5-2545   3.50 GHz base, 4.5 GHz turbo (2026), Linux -- UPDATE Jan 2026
+gcc -O3 speed.c -lm (Gnu CC 13.3.0)
+						(base, turbo)
+    ind divide	1.32, 1.32, 1.35	1.33ns	(4.7, 6.0 cycles)
+    double add  0.437, 0.440, 0.439	0.44ns	(1.5, 2.0 cycles)
+    double mult	0.867, 0.865, 0.869	0.87ns	(3.0, 4.0 cycles)
+    double div	3.02, 3.17, 3.26	3.15ns	(11, 14 cycles)
+    sqrt+add	4.73, 4.80, 4.78	4.77ns	(17, 21 cycles)
+    sin+mult	14.1, 14.3, 14.3	14.3ns	(50, 64 cycles)
+    exp+div	11.2, 11.1, 11.0	11.1ns	(39, 50 cycles)
+    float add	3.15, 3.12, 3.07	11.3ns	(40, 51 cycles)
+    float div	5.23, 5.25, 5.33	5.27ns	(18, 24 cycles)
+    float sqrt	3.43, 3.42, 3.41	3.42ns	(12, 15 cycles)
+    float sin	15.8, 15.8, 15.7	15.8ns	(55, 71 cycles)
+    float exp	13.1, 13.0, 13.1	13.1ns	(46, 59 cycles)
+
 
 Apple M1 Pro, 2.0-3.2GHz (2021), macOS/Xcode  -- UPDATE Aug 2022
 gcc -O3 speed.c -lm  (Gnu CC 11.3.0)
