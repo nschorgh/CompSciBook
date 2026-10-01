@@ -40,6 +40,7 @@ int main() {
   a = 1.;
   before = clock();
   for(i=0;i<N;i++) a=sin(3.*a);
+  //for(i=0;i<N;i++) a=tan(3.*a);
   elapsed = (clock()-before)/CLOCKS_PER_SEC;
   printf("sin %f %f\n",elapsed,a);
 
@@ -49,6 +50,13 @@ int main() {
   for(i=0;i<N;i++) a=exp(1./a);
   elapsed = (clock()-before)/CLOCKS_PER_SEC;
   printf("exp %f %f\n",elapsed,a);
+
+  /* log + 1 addition */
+  a = 1.;
+  before = clock();
+  for(i=0;i<N;i++) a=log(a+7.);
+  elapsed = (clock()-before)/CLOCKS_PER_SEC;
+  printf("log %f %f\n",elapsed,a);
 
   return 0;
 }
